@@ -1,4 +1,4 @@
-package com.example.myproject.util;
+package com.example.myproject.result;
 
 
 import lombok.Builder;
@@ -82,4 +82,11 @@ public class ResponseResult<T> {
                 .build();
     }
 
+    public static <T> ResponseResult<T> fail(ResponseStatus status, T data, String message) {
+        return ResponseResult.<T>builder().data(data)
+                .message(message)
+                .status(status.getResponseCode())
+                .timestamp(System.currentTimeMillis())
+                .build();
+    }
 }

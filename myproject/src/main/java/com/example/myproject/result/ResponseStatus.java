@@ -1,4 +1,4 @@
-package com.example.myproject.util;
+package com.example.myproject.result;
 
 
 import lombok.AllArgsConstructor;
@@ -19,12 +19,13 @@ public enum ResponseStatus {
     HTTP_STATUS_400("400", "request error"),
     HTTP_STATUS_401("401", "no authentication"),
     HTTP_STATUS_403("403", "no authorities"),
-    HTTP_STATUS_500("500", "server error");
+    HTTP_STATUS_500("500", "server error"),
 
 //    /* 用户错误 */
-//    USER_NOT_LOGIN("2001", "用户未登录"),
-//    USER_ACCOUNT_EXPIRED("2002", "账号已过期"),
-//    USER_CREDENTIALS_ERROR("2003", "密码错误"),
+    resgister_fail("2004","用户注册信息失败"),
+    USER_NOT_EXIST("2001", "用户不存在"),
+    USER_ACCOUNT_EXPIRED("2002", "账号已过期"),
+    USER_CREDENTIALS_ERROR("2003", "密码错误");
 //
 //    ERROR("500", "失败"),
 //    SYSTEM_ERROR("501", "系统错误"),
@@ -51,7 +52,11 @@ public enum ResponseStatus {
                     HTTP_STATUS_400,
                     HTTP_STATUS_401,
                     HTTP_STATUS_403,
-                    HTTP_STATUS_500
+                    HTTP_STATUS_500,
+                    USER_NOT_EXIST,
+                    USER_CREDENTIALS_ERROR,
+                    USER_ACCOUNT_EXPIRED,
+                    resgister_fail
             ));
 
     /**
