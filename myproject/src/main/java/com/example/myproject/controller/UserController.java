@@ -27,7 +27,7 @@ public class UserController {
 
     @ApiOperation(value = "登录",notes = "输入用户名和密码登录")
     @ApiImplicitParam(name = "loginBean",value = "用户登录信息",required = true,dataType = "LoginBean")
-    @PostMapping("/user/login")
+    @PostMapping("/login")
     public ResponseResult login(@RequestBody UserLoginBO userLoginBO) {
         log.info(userLoginBO.toString());
         if (userService.isLogin(userLoginBO)) {
@@ -41,7 +41,7 @@ public class UserController {
 
     @ApiOperation(value = "注册",notes = "根据填写信息注册")
     @ApiImplicitParam(name = "registerBean",value = "用户注册信息",required = true,dataType = "RegisterBean")
-    @PostMapping("/user/register")
+    @PostMapping("/register")
     public ResponseResult register(@RequestBody UserRegisterBO userRegisterBO) {
         log.info(userRegisterBO.toString());
         if (userService.register(userRegisterBO) == null) {

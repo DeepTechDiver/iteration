@@ -20,7 +20,7 @@ public class TokenUtil {
     /**
      * token秘钥
      */
-    private static final String TOKEN_SECRET = "zgxt";
+    private static final String TOKEN_SECRET = "Test";
 
 
     /**

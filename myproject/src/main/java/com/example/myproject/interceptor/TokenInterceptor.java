@@ -37,7 +37,7 @@ public class TokenInterceptor implements HandlerInterceptor {
                 return true;
             }
         }
-                response.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json; charset=utf-8");
         PrintWriter out = null;
         try {
