@@ -70,7 +70,9 @@ spring.datasource.password=123456
 
 ## Druid的使用
 
-详细内容前往 ---> [Spring Boot 整合 Druid 指南](https://developer.aliyun.com/article/1157595)
+详细配置前往 ---> [Spring Boot 整合 Druid 指南](https://developer.aliyun.com/article/1157595)
+
+[官方文档]([Druid介绍 · ApacheDruid中文技术文档 (apache-druid.cn)](http://www.apache-druid.cn/GettingStarted/chapter-1.html))
 
 **1、引入依赖**
 
@@ -79,7 +81,7 @@ spring.datasource.password=123456
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.2.6</version>
+            <version>1.1.20</version>
         </dependency>
 ```
 

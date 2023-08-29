@@ -50,7 +50,7 @@ public class UserController {
     @PostMapping("/register")
     public ResponseResult register(@RequestBody UserRegisterBO userRegisterBO) {
         log.info(userRegisterBO.toString());
-        if (userService.register(userRegisterBO) == null) {
+        if (userService.register(userRegisterBO) != null) {
             return ResponseResult.success();
         } else {
             return ResponseResult.fail("注册失败");
@@ -58,9 +58,9 @@ public class UserController {
     }
 
     @GetMapping("/findAll")
-    public String query() {
-        userMapper.findAll();
-        return "查询成功";
+    public List<User> query() {
+        List<User> res =  userMapper.findAll();
+        return res;
     }
 
 }
